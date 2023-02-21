@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="space-around">
-      <v-card width="800">
+      <v-card width="750">
         
         <v-img height="200" :src="url" cover class="text-white">
           <v-toolbar color="rgba(0, 0, 0, 0)" theme="dark">
