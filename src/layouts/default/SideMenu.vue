@@ -1,6 +1,7 @@
 <template>
       <v-navigation-drawer
         expand-on-hover 
+        rail-width="62"
         width="330"
         rail
         class="bg-red"
@@ -20,8 +21,18 @@
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item class="text-yellow bg-black" prepend-icon="mdi-home" title="Home" value="home" color="black" to="/"></v-list-item>
-          <v-list-item class="text-yellow bg-black" prepend-icon="mdi-table" title="Tabla" value="table" color="black" to="/tabla"></v-list-item>
+          <v-list-item class="text-yellow bg-black rounded-shaped" 
+          prepend-icon="mdi-home" title="Home" 
+          value="home" color="black" to="/"></v-list-item>
+
+          <v-list-item class="text-yellow bg-black rounded-shaped" 
+          prepend-icon="mdi-table" title="Tabla" 
+          value="table" color="black" to="/tabla"></v-list-item>
+
+          <v-list-item class="text-yellow bg-black rounded-shaped" 
+          prepend-icon="mdi-table" title="Tabla CRUD" 
+          value="crud" color="black" to="/crud"></v-list-item>
+          
         </v-list>
       </v-navigation-drawer>
      

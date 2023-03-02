@@ -1,25 +1,16 @@
 <template>
   <v-container>
     <v-row justify="space-around">
-      <v-card width="750">
-        
-        <v-img height="200" :src="url" cover class="text-white">
+      <v-card width="750" class="rounded-shaped">
+        <v-img height="200" :src="url" cover class="text-white" :elevation="20">
           <v-toolbar color="rgba(0, 0, 0, 0)" theme="dark">
-            <template v-slot:prepend>
-              <v-btn icon="$menu"></v-btn>
-            </template>
-
-            <v-toolbar-title class="text-h6"> Mensajes </v-toolbar-title>
-
-            <template v-slot:append>
-              <v-btn icon="mdi-dots-vertical"></v-btn>
-            </template>
+            <v-toolbar-title class="text-h4 mb"> Mensajes </v-toolbar-title>
           </v-toolbar>
           <template v-slot:placeholder>
       <div class="d-flex align-center justify-center fill-height">
         <v-progress-circular
-          color="grey-lighten-4"
           indeterminate
+          color="red"
         ></v-progress-circular>
       </div>
       </template>
@@ -57,26 +48,20 @@
 <script setup>
 import { ref } from "vue";
 const messages = ref([]);
-const url = ref("https://random.imagecdn.app/500/200");
-const red = ref("cyan");
+const url = ref("https://img.freepik.com/vector-gratis/efecto-superposicion-chispas-fuego-rojo-fogata-ardiente_107791-13792.jpg?w=826&t=st=1677200697~exp=1677201297~hmac=c4c7725f488b84de7300f144378feb39b10015985caefcaca71b55a8c9cddee6");
+const red = ref("black");
 messages.value = [
   {
     from: "You",
     message: `Sure, I'll see you later.`,
     time: "10:42am",
-    color: "deep-purple-lighten-1",
+    color: "red",
   },
   {
     from: "John Doe",
     message: "Yeah, sure. Does 1:00pm work?",
     time: "10:37am",
-    color: "green",
-  },
-  {
-    from: "You",
-    message: "Did you still want to grab lunch today?",
-    time: "9:47am",
-    color: "blue",
+    color: "yellow",
   },
 ];
 
