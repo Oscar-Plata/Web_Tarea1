@@ -158,6 +158,7 @@ function deleteItem(item) {
 
 function deleteItemConfirm() {
   this.articulos.splice(this.editedIndex, 1);
+  deleteItemjs(this.editItem);
   this.closeDelete();
 }
 
@@ -176,11 +177,11 @@ function closeDelete() {
 function save() {
   if (this.editedIndex > -1) {
     Object.assign(this.articulos[this.editedIndex], this.editedItem);
+    editItemjs(this.editItem);
   } else {
     this.articulos.push(this.editedItem);
+    postItemjs(this.editItem);
   }
-
-  postItemjs(this.editItem);
   this.close();
 }
 
@@ -213,9 +214,28 @@ function postItemjs(item) {
     .then((json) => console.log(json));
 }
 
-function editItemjs() {}
+function editItemjs(item) {
+  fetch("https://jsonplaceholder.typicode.com/posts/$item.id", {
+    method: "PATCH",
+    body: JSON.stringify({
+      id: item.id,
+      title: item.titulo,
+      body: item.contenido,
+      userId: item.autorid,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+}
 
-function deleteItemjs() {}
+function deleteItemjs(item) {
+  fetch("https://jsonplaceholder.typicode.com/posts/$item.id", {
+    method: "DELETE",
+  });
+}
 
 function cargarDatos() {
   var postJson;
