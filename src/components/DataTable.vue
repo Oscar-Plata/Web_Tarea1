@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto my-2 rounded-shaped" width="1200">
+  <v-card class="mx-2 my-2 rounded-shaped">
     <v-table theme="dark">
       <thead>
         <tr>

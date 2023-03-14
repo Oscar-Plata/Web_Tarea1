@@ -7,13 +7,13 @@
             <v-toolbar-title class="text-h4 mb"> Mensajes </v-toolbar-title>
           </v-toolbar>
           <template v-slot:placeholder>
-      <div class="d-flex align-center justify-center fill-height">
-        <v-progress-circular
-          indeterminate
-          color="red"
-        ></v-progress-circular>
-      </div>
-      </template>
+            <div class="d-flex align-center justify-center fill-height">
+              <v-progress-circular
+                indeterminate
+                color="red"
+              ></v-progress-circular>
+            </div>
+          </template>
         </v-img>
 
         <v-card-text>
@@ -39,7 +39,6 @@
           <v-btn @click="messages = []" color="red">BORRAR</v-btn>
           <v-btn @click="recargarImagen()" :color="red">RECARGAR</v-btn>
         </v-card-actions>
-        
       </v-card>
     </v-row>
   </v-container>
@@ -48,18 +47,20 @@
 <script setup>
 import { ref } from "vue";
 const messages = ref([]);
-const url = ref("https://img.freepik.com/vector-gratis/efecto-superposicion-chispas-fuego-rojo-fogata-ardiente_107791-13792.jpg?w=826&t=st=1677200697~exp=1677201297~hmac=c4c7725f488b84de7300f144378feb39b10015985caefcaca71b55a8c9cddee6");
+const url = ref(
+  "https://img.freepik.com/vector-gratis/efecto-superposicion-chispas-fuego-rojo-fogata-ardiente_107791-13792.jpg?w=826&t=st=1677200697~exp=1677201297~hmac=c4c7725f488b84de7300f144378feb39b10015985caefcaca71b55a8c9cddee6"
+);
 const red = ref("black");
 messages.value = [
   {
-    from: "You",
-    message: `Sure, I'll see you later.`,
+    from: "Yo",
+    message: `Hola, esteban 🐸`,
     time: "10:42am",
     color: "red",
   },
   {
-    from: "John Doe",
-    message: "Yeah, sure. Does 1:00pm work?",
+    from: "Esteban",
+    message: "Alo Oscar 🐢",
     time: "10:37am",
     color: "yellow",
   },

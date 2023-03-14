@@ -1,6 +1,5 @@
 <template>
   <v-btn @click.stop="evento">{{ etiqueta }}</v-btn>
-
   <!-- <v-btn @click.stop="$emit('cambio', ++numero)">{{ etiqueta }}</v-btn> -->
 </template>
 

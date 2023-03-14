@@ -1,6 +1,6 @@
 <template>
   <HelloWorld />
-  <v-card class="pa-6 rounded-shaped" :elevation="20">
+  <v-card class="pa-6 rounded-shaped" width="750" centered :elevation="20">
     <v-row justify="space-around">Contador:{{ valor }}</v-row>
     <v-row justify="space-around">
       <botonDesplegable
